@@ -1,0 +1,292 @@
+@font-face {
+  font-family: 'Page Font';
+  src: url('./fonts/PTSans-Narrow.woff2') format('woff2'), 
+       url('./fonts/PTSans-Narrow.woff') format('woff'),
+	     url('./fonts/PTSans-Narrow.ttf') format('ttf'),
+	     url('./fonts/PTSans-Narrow.eot') format('eot');
+}
+
+@font-face {
+  font-family: 'Page Font Bold';
+  src: url('./fonts/PTSansNarrow-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Title Font';
+  src: url('./fonts/Truth.woff2') format('woff2');
+}
+
+p, h1 {
+  margin: 0;
+}
+
+
+
+main {
+  font-family: 'Page Font';
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  width: 1280px;
+  margin: 10px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+}
+
+.main-info {
+  align-items: stretch;
+  padding: 5px;
+  row-gap: 5px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 4px solid black;
+}
+
+.header__slogan {
+  border-bottom: 2px solid #000;
+  word-spacing: 15px;
+  font-size: 18px;
+  font-style: italic;
+  margin-left: auto;  
+}
+
+.header__party {
+  border-bottom: 2px solid #000;
+  letter-spacing: 10px;
+  font-family: "Page Font Bold";
+  font-size: 20px;
+  margin-left: auto;
+}
+
+.newspaper-title {
+  display: flex;
+  height: 160px;
+}
+
+.newspaper-title__main-title {
+  font-family: 'Title Font';
+  text-align: justify;
+  letter-spacing: 8px;
+  font-size: 170px;
+}
+
+.newspaper-title__awards {
+  height: 100%;
+  object-fit: cover;
+}
+
+.additional {
+  display: flex;
+  width: 100%;
+}
+
+.additional__foundation-date {
+  width: 25%;
+  font-size: 20px;
+  letter-spacing: 8px;
+  text-align: center;
+}
+
+.additional__foundation-date__last-line {
+  word-spacing: 17px;
+}
+
+.rest-info {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.number-date-price {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rest-info__line {
+  height: 2px;
+  background-color: black;
+}
+
+.rest-info__party-info {
+  font-size: 32px;
+  font-family: "Page Font Bold";
+  word-spacing: 63px;
+  letter-spacing: 4px;
+}
+
+.settings {
+  width: 25%
+}
+
+.main-articles {
+  width: 100%;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, 24.5%);
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.article {
+  box-sizing: border-box;
+  padding: 10px 5px 10px 5px ;
+}
+
+.article__header {
+  font-size: 40px;
+  text-align: center;
+}
+
+.article__main-text {
+  box-sizing: border-box;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: justify;
+  column-count: 2;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.article__main-text::first-letter {
+  font-size: 37px;
+}
+
+.article__main-text__image-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.few-collumn-content {
+  column-span: all;
+}
+
+.article__main-text__image-container__image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.article__main-text__image-container__text {
+  align-self: end;
+  font-style: italic;
+}
+
+.wide {
+  grid-column: 2 / 4;
+}
+
+.wide-bordered {
+  border: 1px solid black;
+}
+
+.wide-text {
+  column-count: 4;
+}
+
+.collumn-articles__wide-image {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 2px solid black;
+  object-fit: cover;
+}
+
+.article__main-text__citation {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  word-spacing: 60px;
+}
+
+.article__main-text__citation__text {
+  margin-left: auto;
+  margin-right: auto;
+  line-height: normal;
+  font-size: 30px;
+}
+
+.joke__text {
+  line-height: 18px;
+  font-size: 14px;
+}
+
+.article__main-text__citation__author {
+  align-self: end;
+}
+
+.color-type:checked ~ main {
+  background-color: #555;
+}
+.color-type:checked ~ main > * {
+  color: white;
+}
+
+.size-radio-medium:checked ~ main  .article__main-text,
+.size-radio-medium:checked ~ main  .joke__text {
+  line-height: 18px;
+  font-size: 16px;
+}
+
+.size-radio-big:checked ~ main  .article__main-text,
+.size-radio-big:checked ~ main  .joke__text {
+  line-height: 20px;
+  font-size: 18px;
+}
+
+.font-tnr:checked ~ main > .main-articles {
+  font-family: "Times New Roman";
+}
+
+.settings__theme__text:after {
+  content: "Светлая";
+}
+
+.color-type:checked ~ main .settings__theme__text:after {
+  content: "Темная";
+}
+
+.size-radio-small:checked ~ main .sizes__small {
+  text-shadow: 1px 1px 2px grey;
+}
+
+.size-radio-medium:checked ~ main .sizes__medium {
+  text-shadow: 1px 1px 2px grey;
+}
+
+.size-radio-big:checked ~ main .sizes__big {
+  text-shadow: 1px 1px 2px grey;
+}
+
+.font-own:checked ~ main .font__own {
+  text-shadow: 1px 1px 2px grey;
+}
+
+.font-tnr:checked ~ main .font__tnr {
+  text-shadow: 1px 1px 2px grey;
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.disabled {
+  display: none;
+}
+
+.font, .sizes {
+  display: flex;
+  flex-direction: column;
+}

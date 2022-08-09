@@ -1,0 +1,8 @@
+d:\CMake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=D:/MinGW/bin/gcc.exe -DCMAKE_CXX_COMPILER=D:/MinGW/bin/g++.exe -G "CodeBlocks - MinGW Makefiles" D:\ng\2d-tree-brenscrazy
+CMake Error at CMakeLists.txt:37 (add_subdirectory):
+  add_subdirectory given source "./googletest" which is not an existing
+  directory.
+
+
+-- Configuring incomplete, errors occurred!
+See also "D:/ng/2d-tree-brenscrazy/cmake-build-debug/CMakeFiles/CMakeOutput.log".

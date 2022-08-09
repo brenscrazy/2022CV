@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1, viewport-fit=cover'>
+    <link rel="stylesheet" href="index.css" >
+    <title>БЛ</title>
+    <link rel="icon" href="./images/icon.png">
+  </head>
+  <body>
+  
+    <input type="checkbox" class="visit-checkbox hidden-checkbox" id="visitcheck" checked>
+    <input type="checkbox" class="jokes-checkbox hidden-checkbox" id="jokescheck" checked>
+    <input type="checkbox" class="schedule-checkbox hidden-checkbox" id="schedulecheck" checked>
+    <input type="checkbox" class="lmr-checkbox hidden-checkbox" id="lmrcheck" checked>
+    <input type="checkbox" class="weather-checkbox hidden-checkbox" id="weathercheck" checked>
+    <input type="checkbox" class="traffic-checkbox hidden-checkbox" id="trafficcheck" checked>
+    <input type="checkbox" class="map-checkbox hidden-checkbox" id="mapcheck" checked>
+    <input type="checkbox" class="girls-checkbox hidden-checkbox" id="girlscheck" checked>
+    
+    <input class="settings-original-checkbox hidden-checkbox" type="checkbox" id="settingscheck">
+    <p class="place greytext">➤ Лагерь Совенок</p>
+    <div class="email">
+      <p class="email__name bold">semen</p>
+      <p class="email__amount">Почта <span class="bold">0</span></p>
+    </div>
+    <label class="settings" for="settingscheck">
+      <span class="bold">Настройки</span>
+    </label>
+    <div class="hide-widgets">
+      <label for="visitcheck">
+        <span class="visittext bold greytext">Посещенные</span>
+      </label>
+      <label for="jokescheck">
+        <span class="jokestext bold greytext">Анекдоты</span>
+      </label>
+      <label for="schedulecheck">
+        <span class="scheduletext bold greytext">Расписание</span>
+      </label>
+      <label for="lmrcheck">
+        <span class="lmrtext bold greytext">Новости разработки ЛМР</span>
+      </label>
+      <label for="weathercheck">
+        <span class="weathertext bold greytext">Погода</span>
+      </label>
+      <label for="trafficcheck">
+        <span class="traffictext bold greytext">Пробки</span>
+      </label>
+      <label for="mapcheck">
+        <span class="maptext bold greytext">Карта</span>
+      </label>
+      <label for="girlscheck">
+        <span class="girlstext bold greytext">Девочки лагеря</span>
+      </label>
+      
+    </div>
+    <main>
+      <div class="news">
+        <div class="news__header">
+          <div class="news__header__types">
+            <div class="news__header__types__type selected-news-type">
+              Новости Совенка
+            </div>
+            <div class="news__header__types__type">
+              Новости СССР
+            </div>
+          </div>
+          <div class="hews__header__date greytext">
+            Пятый день лета, 13:37
+          </div>
+        </div>
+        <p class="news__title">Пионер Шурик найден в катакомбах живым.</p>
+        <p class="news__title">Взрыв Генды, кто виноват?</p>
+        <p class="news__title">Пионеры сообщают о девочке с кошачьими ушами на окраине лагеря.</p>
+        <p class="news__title">Подготовка к походу идет полным ходом.</p>
+        <p class="news__title">Пионерка Ульяна признана лучшей девочкой Совенка.</p>
+        <div class="stocks">
+          <div class="stocks__currency">
+            <span class="stocks__currency__name">
+              USD ГБ
+            </span>
+            <span class="stocks__currency__price">
+              0.50
+            </span>
+            <span class="stocks__currency__diff greytext">
+              +0
+            </span>
+          </div>
+          <div class="stocks__currency">
+            <span class="stocks__currency__name">
+              EUR ГБ
+            </span>
+            <span class="stocks__currency__price">
+              0.66
+            </span>
+            <span class="stocks__currency__diff greytext">
+              +0
+            </span>
+          </div>
+          <div class="stocks__currency">
+            <span class="stocks__currency__name">
+              НЕФТЬ
+            </span>
+            <span class="stocks__currency__price">
+              35.67
+            </span>
+            <span class="stocks__currency__diff greytext">
+              +0.85
+            </span>
+          </div>
+        </div>
+      </div>
+      <article class="upper-ad">
+        <img class="upper-ad__img" src="./images/icon.png" alt="Green leaf">
+        <h1 class="upper-ad__title link">
+          Посетите лучший лагерь СССР
+        </h1>
+        <p class="upper-ad__add-info">
+          Стань образцовым пионером за 7 дней!
+        </p>
+      </article>
+      <div class="search">
+        <div class="search__sections">
+          <span class="search__sections__section link">Фильмы</span>
+          <span class="search__sections__section link">Фотокарточки</span>
+          <span class="search__sections__section link">ТАСС</span>
+          <span class="search__sections__section link">Карты</span>
+          <span class="search__sections__section link">Универсам</span>
+          <span class="search__sections__section link">Словарь</span>
+          <span class="search__sections__section link">Муз. кружок</span>
+          <span class="search__sections__section link">eще</span>
+        </div>
+        <div class="search__input">
+          <span class="search__input__name">Совенок</span>
+          <input class="search__input__request" id="search-line">
+          <input class="search__input__submit" type="submit" value="Найти">
+          <div class="search__input__triangle"></div>
+          <img class="search__icon mic" src="./images/mic.png" alt="mic">
+          <img class="search__icon keyboard" src="./images/keyboard.png" alt="keyboard">
+        </div>
+        <p class="search__slogan">
+          Найдется все. Например, 
+        </p>
+      </div>
+      <img class="wide-ad" src="./images/ad.png" alt="perenos">
+      <div class="widgets first-widgets">
+        <div class="collumn">
+          <div class="visit collumn-widget">
+            <p class="visit__name link widgetname">
+              Посещаемое
+            </p>
+            <p class="visit__visiting">
+              <span class="visit__visiting__title bold">Столовая</span> - котлеты и сколопендры.
+            </p>
+            <p class="visit__visiting">
+              <span class="visit__visiting__title bold">Клубы</span> - нужны новые члены.
+            </p>
+            <p class="visit__visiting">
+              <span class="visit__visiting__title bold">Площадь</span> - взрывать и подметать.
+            </p>
+            <p class="visit__visiting">
+              <span class="visit__visiting__title bold">Медпункт</span> - лечить душу и тело.
+            </p>
+            <p class="visit__visiting">
+              <span class="visit__visiting__title bold">Пляж</span> - ловить раков.
+            </p>
+            <p class="visit__visiting">
+              <span class="visit__visiting__title bold">Умывальники</span> - чистить трубочиста.
+            </p>
+            <p class="visit__visiting">
+              <span class="visit__visiting__title bold">Остановка</span> - не ухать.
+            </p>
+          </div>
+          <div class="jokes collumn-widget">
+            <p class="jokes__name link widgetname">
+              Мемы
+            </p>
+            <input class="memecheckbox hidden-checkbox" type="checkbox" id="meme1">
+            <input class="memecheckbox hidden-checkbox" type="checkbox" id="meme2">
+            <input class="memecheckbox hidden-checkbox" type="checkbox" id="meme3">
+            <input class="memecheckbox hidden-checkbox" type="checkbox" id="meme4">
+            <input class="memecheckbox  hidden-checkbox" type="checkbox" id="meme5">
+            <div class="memecard">
+              <img class="memecard__image" src="https://sun9-83.userapi.com/impg/3VF9NwQCfKjqn1TZBZsmuHPgGlfBycrT6-PROw/kBY_PsBOqdI.jpg?size=1080x1209&quality=96&sign=a585f518a79a50b41b36bba3b47bf0f3&type=album" alt="meme">
+              <label for="meme1">
+                <span class="link">следующий мем</span>
+              </label>
+            </div>
+            <div class="memecard">
+              <img class="memecard__image" src="https://sun9-56.userapi.com/impg/HrFGnelb_5I4-SJ_e_wS96_d3ZKCI4FETVfEfg/SrqgvZUG2vk.jpg?size=2267x1944&quality=96&sign=ceeacf89c62c933dec7ee8dfe5203851&type=album" alt="meme">
+              <label for="meme2">
+                <span class="link">следующий мем</span>
+              </label>
+            </div>
+            <div class="memecard">
+              <img class="memecard__image" src="https://sun9-82.userapi.com/impg/JAK8ibXBazYOYWqIxGnRuz7fLnGe2xHg-iLt5w/2iAI6lbcen0.jpg?size=1080x1499&quality=96&sign=8fc1e5f8f83caec251be4e9ff5df0d94&type=album" alt="meme">
+              <label for="meme3">
+                <span class="link">следующий мем</span>
+              </label>
+            </div>
+            <div class="memecard">
+              <img class="memecard__image" src="https://sun9-20.userapi.com/impg/jIpHvwEQvWgcwQBVwp7ntIiYfnDK017EQZR6lQ/2hV5UdNGIbg.jpg?size=1080x1188&quality=96&sign=4fd0cb5610309edd440fe666f5314776&type=album" alt="meme">
+              <label for="meme4">
+                <span class="link">следующий мем</span>
+              </label>
+            </div>
+            <div class="memecard">
+              <img class="memecard__image" src="https://sun9-13.userapi.com/impg/rmSd4enTWzlwbxYxcENdDg8orWCDy9dlLF7LzA/jhkDRPUs6vk.jpg?size=360x476&quality=96&sign=78ca1dce9caf6b5931caffb4980a09d9&type=album" alt="meme">
+              <label for="meme5">
+                <span class="link">мемы кончились</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div>
+      <div class="widgets second-widgets">
+        <div class="collumn">
+          <div class="schedule collumn-widget">
+            <p class="schedule__name link widgetname">
+              Расписание дня
+            </p>
+            <p class="schedule__element">
+              8:00 подьъем
+            </p>
+            <p class="schedule__element">
+              9:00 завтрак
+            </p>
+            <p class="schedule__element">
+              13:00 обед
+            </p>
+            <p class="schedule__element">
+              14:00 трудовая повинность
+            </p>
+            <p class="schedule__element">
+              18:00 ужин
+            </p>
+            <p class="schedule__element">
+              19:00 поход
+            </p>
+            <p class="schedule__element">
+              22:00 отбой
+            </p>
+          </div>
+          <div class="lmr collumn-widget">
+            <p class="lmr__name link widgetname">
+              Новости разработки ЛМР
+            </p>
+            <div class="lmr__news">
+            <p>Релиз новеллы "Любовь, деньги, рок-н-ролл" перенесен на новую дату. <span class="greytext">снова</span></p>
+            <p>Релиз новеллы "Любовь, деньги, рок-н-ролл" перенесен на новую дату. <span class="greytext">снова</span></p>
+            <p>Релиз новеллы "Любовь, деньги, рок-н-ролл" перенесен на новую дату. <span class="greytext">снова</span></p>
+            <p>Релиз новеллы "Любовь, деньги, рок-н-ролл" перенесен на новую дату. <span class="greytext">снова</span></p>
+            <p>Релиз новеллы "Любовь, деньги, рок-н-ролл" перенесен на новую дату. <span class="greytext">снова</span></p>
+            <p>Релиз новеллы "Любовь, деньги, рок-н-ролл" перенесен на новую дату. <span class="greytext">снова</span></p>
+            <p>Релиз новеллы "Любовь, деньги, рок-н-ролл" перенесен на новую дату. <span class="greytext">снова</span></p>
+            <p>Релиз новеллы "Любовь, деньги, рок-н-ролл" перенесен на новую дату. <span class="greytext">снова</span></p>
+            <p>Релиз новеллы "Любовь, деньги, рок-н-ролл" перенесен на новую дату. <span class="greytext">снова</span></p>
+            <p>Релиз новеллы "Любовь, деньги, рок-н-ролл" перенесен на новую дату. <span class="greytext">снова</span></p>
+            </div>
+            <div class="lmr__fades-top">
+            </div>
+            <div class="lmr__fades-bottom">
+            </div>
+          </div>
+        </div>
+        
+        
+      </div>
+      <div class="widgets third-widgets">
+        <div class="collumn">
+          <div class="weather collumn-widget">
+            <p class="weather__name link widgetname">
+              Погода 🌞 <span class="greytext">+28°C</span>
+            </p>
+            <p> Вечер +26°C, ночь +25°C </p>
+          </div>
+          <div class="traffic collumn-widget">
+            <p class="traffic__name link widgetname">
+              Пробки 🟢 <span class="greytext">0 баллов</span>
+            </p>
+            <p> Автобусов нет. </p>
+          </div>
+          <div class="map collumn-widget">
+            <p class="map__name link widgetname">
+              Карта Совенка
+            </p>
+            <div class="map__elements"> <p class="bold">Лодки</p>  <p class="bold">Расписания</p>  <p class="bold">410-е автобусы</p></div>
+          </div>
+          <div class="girls collumn-widget">
+            <p class="girls__name link widgetname">
+              Девочки лагеря
+            </p>
+            <p>Ульяна <span class="greytext">насиловать будешь?</span></p>
+            <p>Алиса <span class="greytext">водка, рок</span></p>
+            <p>Лена <span class="greytext">ммм суецыд</span></p>
+            <p>Славя <span class="greytext">а ну подметай</span></p>
+            <p>Мику <span class="greytext">многабукав</span></p>
+          </div>
+        </div>
+        
+        
+      </div>
+    </main>
+  </body>
+</html>

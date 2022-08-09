@@ -1,0 +1,2 @@
+D:\MinGW\bin\ar.exe qc lib2d_tree_lib.a  CMakeFiles/2d_tree_lib.dir/src/kdtree.cpp.obj CMakeFiles/2d_tree_lib.dir/src/point.cpp.obj CMakeFiles/2d_tree_lib.dir/src/rbtree.cpp.obj CMakeFiles/2d_tree_lib.dir/src/rect.cpp.obj
+D:\MinGW\bin\ranlib.exe lib2d_tree_lib.a

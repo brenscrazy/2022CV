@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1, viewport-fit=cover'>
+    <link rel="stylesheet" href="index.css" >
+    <title>БЛ</title>
+    <link rel="icon" href="./images/icon.png">
+  </head>
+  <body>
+    <div class="cite-header">
+      <p class="header-text">
+        LETACH 5K by brenscrazy
+      </p>
+    </div>
+    <main>
+      <div class='cards'>
+       <div class='card'>
+         <div class='gradient'></div>
+          <img class='author-image' src='./images/Bus.jpg' alt='Автобус'>
+          <div class='info'>
+            <h1 class='name'>
+             Пионеры закончились
+            </h1>
+            <span class='description'>
+              У каждой истории есть начало и конец. Почти у каждой...
+            </span>
+          </div>
+        </div>
+      <div class='card'>
+         <div class='gradient'></div>
+          <img class='author-image' src='./images/Elektronik.jpg' alt='Электроник'>
+          <div class='info'>
+            <h1 class='name'>
+              Электроник
+            </h1>
+            <span class='description'>
+              Прочищу твои трубы.
+            </span>
+          </div>
+        </div>
+        <div class='card'>
+         <div class='gradient'></div>
+          <img class='author-image' src='./images/Semen.jpg' alt='Семен'>
+          <div class='info'>
+            <h1 class='name'>
+              Семен
+            </h1>
+            <span class='description'>
+              П-п-п-привет... ме-ме-меня зовут умгмг. Мммм... а вот... ну, как бы, чем занимаешься? Кхм, пук, ну... я вот в компьютер люблю играть... а, тебе пора? Ну ладно...
+            </span>
+          </div>
+        </div>
+        <div class='card'><div class='gradient'></div>
+          <img class='author-image' src='./images/Julia.jpg' alt='Юля'>
+          <div class='info'>
+            <h1 class='name'>
+              Юля
+            </h1>
+            <span class='description'>
+              Ты пойдешь со мной?
+            </span>
+          </div>
+        </div>
+        <div class='card'><div class='gradient'></div>
+          <img class='author-image' src='./images/Miku.jpg' alt='Мику'>
+          
+          <div class='info'>
+            <h1 class='name'>
+              Мику
+            </h1>
+            <span class='description'>
+              Хочешь, будем вместе музыку играть? Хотя может быть ты и не хочешь. А вдруг не умеешь. Но тогда я тебя научу, это не сложно честно-честно. Ты только в кружок запишись и я тебя на чем угодно научу. На гитаре, на барабане, на пианино, на скрипке, на флейте, на нервах.
+            </span>
+          </div>
+        </div>
+        <div class='card'>
+        <div class='gradient'></div>
+          <img class='author-image' src='./images/Slavya.jpg' alt='Славя'>
+          
+          <div class='info'>
+            <h1 class='name'>
+              Славя
+            </h1>
+            <span class='description'>
+              Пошли в баню?
+            </span>
+          </div>
+        </div>
+        <div class='card'>
+        <div class='gradient'></div>
+          <img class='author-image' src='./images/Lena.jpg' alt='Лена'>
+          
+          <div class='info'>
+            <h1 class='name'>
+              Лена
+            </h1>
+            <span class='description'>
+              Жди на площади, скоро буду.
+            </span>
+          </div>
+        </div>
+        <div class='card'>
+        <div class='gradient'></div>
+          <img class='author-image' src='./images/Alice.jpg' alt='Алиса'>
+          <div class='info'>
+            <h1 class='name'>
+              Алиса
+            </h1>
+            <span class='description'>
+              Чай, водку, меня?
+            </span>
+          </div>
+        </div>
+        <div class='card'>
+         <div class='gradient'></div>
+          <img class='author-image' src='./images/Ulyana.jpg' alt='Ульяна'>
+          <div class='info'>
+            <h1 class='name'>
+              Ульяна
+            </h1>
+            <span class='description'>
+              Насиловать будешь?
+            </span>
+          </div>
+        </div>
+        
+      </div>
+      <div class='buttons'>
+        <div class='button-div no'>
+          <input type='image' onclick='swipe("left")' class='button-img' src='./images/No.jpg' alt='Nope'>
+        </div>
+        <div class='button-div super-like'>
+          <input type='image' onclick='swipe("top")' class='button-img' src='./images/SuperLike.jpg' alt='SuperLike'>
+        </div>
+        <div class='button-div like'>
+          <input type='image' onclick='swipe("right")' class='button-img' src='./images/Like.jpg' alt='Like'>
+        </div>
+        <script>
+          let startX = 0;
+          let startY = 0;
+          let swipingElement = document.querySelectorAll('.cards')[0]
+          swipingElement.addEventListener('touchstart', touchstartFunction, false);
+          swipingElement.addEventListener('touchend', touchendFunction, false);
+          function swipe(where) {
+            let elements = document.querySelectorAll('.card:not(.swiped)')
+            let index = elements.length - 1
+            if (index < 1) {
+              return
+            }
+            let topCard = elements[elements.length - 1]
+            if (where === 'right') {
+              topCard.style.left = 110 + 'vw';
+            } else if (where === 'left') {
+              topCard.style.left = -110 + 'vw';
+            } else if (where === 'top') {
+              topCard.style.bottom = 110 + 'vh';
+            }
+            setTimeout(() => { topCard.classList.add('swiped') }, 300);
+          }
+          function touchstartFunction(e) {
+            startX = e.touches[0].clientX;
+            startY = e.touches[0].clientY;
+          }
+          function touchendFunction(e) {
+            let vectorX = e.changedTouches[0].clientX - startX;
+            let vectorY = e.changedTouches[0].clientY - startY;
+            let leng = Math.sqrt(vectorX * vectorX + vectorY * vectorY);
+            if (leng < 50) {
+              return
+            }
+            let sin = vectorY / leng;
+            let cos = vectorX / leng;
+            if (-0.5 < sin && sin < 0.5 && cos > 0) {
+              swipe('right')
+            } else if (-0.5 < sin && sin < 0.5 && cos < 0) {
+              swipe('left')
+            } else if (-0.5 < cos && cos < 0.5 && sin < 0) {
+              swipe('top')
+            }
+          }
+        </script>
+      </div>
+    </main>
+   <!-- <div class="cite-footer">
+      <div class="mails">
+        <span class='letter'>✉</span>
+        <span class='write-us'>Напишите нам:</span>
+        <span class='mail-adress'>
+        <a class='email-link' href="mailto:mail@sovietgames.su">mail@sovietgames.su</a>
+        </span>
+        <span class='mail-adress'>
+        <a class='email-link' href="mailto:glebmanufa@gmail.com">glebmanufa@gmail.com</a>
+        </span>
+      </div>
+      <div class="company">
+        <span>© 2021 <a href="https://sovietgames.su">Soviet Games</a></span><br>
+      </div>
+    </div>-->
+  </body>
+</html>
